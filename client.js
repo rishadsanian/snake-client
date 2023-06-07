@@ -9,12 +9,12 @@ const connect = function() {
       port: PORT,
     },
     () => {
-      console.log("Connected");
+      console.log("Connected");//Message on connect
       conn.setEncoding("utf8");
-      conn.on("data", (data) => {
+      conn.on("data", (data) => {//ready to take data from server
         console.log(data);
       });
-      conn.write("Name: " + snakeName);
+      conn.write("Name: " + snakeName);//displays name
 
       // conn.write(moves.up);
     }

@@ -2,7 +2,7 @@
 const  {keyDict} = require("./constants");
 let connection;
 
-//functions to take in  and handle user input
+//functions to take in  and  callback to handle user input
 const setupInput = (conn) => {
   connection = conn;
   const stdin = process.stdin;
@@ -18,12 +18,9 @@ const handleUserInput = (key) => {
   if (key === "\u0003") {
     process.exit();
   }
-
   if (keyDict[key]) {
     connection.write(keyDict[key]);
   }
-
- 
 };
 
 

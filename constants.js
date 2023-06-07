@@ -1,3 +1,5 @@
+//Settings for server connetion, playername, keyboard settings
+
 const IP = "165.227.47.243";
 const PORT = "50541";
 const snakeName = "RSA";
