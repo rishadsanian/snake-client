@@ -1,7 +1,7 @@
 const net = require("net");
 
 // establishes a connection with the game server
-const connect = function (host, port) {
+const connect = function(host, port) {
   console.log("Connecting ...");
   const conn = net.createConnection(
     {
@@ -15,6 +15,7 @@ const connect = function (host, port) {
         console.log(data);
       });
       conn.write("Name: RSA");
+      
       // conn.write(moves.up);
     }
   );
@@ -26,9 +27,9 @@ const connect = function (host, port) {
 };
 
 const moves = {
-  up: "Move: up", //- move up one square (unless facing down)
-  down: "Move: down", // - //move down one square (unless facing up)
-  left: "Move: left", //- //move left one square (unless facing right)
-  right: "Move: right", //- //move left one square (unless facing left)
+  "up": "Move: up", //- move up one square (unless facing down)
+  "down": "Move: down", // - //move down one square (unless facing up)
+  "left": "Move: left", //- //move left one square (unless facing right)
+  "right": "Move: right", //- //move left one square (unless facing left)
 };
 module.exports = { connect, moves };
