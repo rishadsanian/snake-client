@@ -19,15 +19,21 @@ const handleUserInput = (key) => {
     process.exit();
   }
 
-  if (moves[key]) {
-    connection.write(moves[key]);
+  if (keyDict[key]) {
+    connection.write(keyDict[key]);
   }
+
+ 
 };
-const moves = {
+const keyDict = {
   w: "Move: up",
   a: "Move: left",
   s: "Move: down",
   d: "Move: right",
+  h : "Say: Hello!",
+  j : "Say: Yum!",
+  k : "Say: hisss",
+  l : "Say: 🐍"
 };
 
 
