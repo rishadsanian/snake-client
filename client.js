@@ -1,11 +1,12 @@
 const net = require("net");
+const { IP, PORT, snakeName } = require("./constants");
 // establishes a connection with the game server
 const connect = function() {
   console.log("Connecting ...");
   const conn = net.createConnection(
     {
-      host: "165.227.47.243", // IP address here,
-      port: 50541, // PORT number here,
+      host: IP,
+      port: PORT,
     },
     () => {
       console.log("Connected");
@@ -13,11 +14,10 @@ const connect = function() {
       conn.on("data", (data) => {
         console.log(data);
       });
-      conn.write("Name: RSA");
-     
-      // conn.write(moves.up);
-    },
+      conn.write("Name: " + snakeName);
 
+      // conn.write(moves.up);
+    }
   );
 
   // interpret incoming data as text

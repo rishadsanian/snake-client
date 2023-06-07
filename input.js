@@ -1,5 +1,5 @@
 
-
+const  {keyDict} = require("./constants");
 let connection;
 
 //functions to take in  and handle user input
@@ -24,16 +24,6 @@ const handleUserInput = (key) => {
   }
 
  
-};
-const keyDict = {
-  w: "Move: up",
-  a: "Move: left",
-  s: "Move: down",
-  d: "Move: right",
-  h : "Say: Hello!",
-  j : "Say: Yum!",
-  k : "Say: hisss",
-  l : "Say: 🐍"
 };
 
 
