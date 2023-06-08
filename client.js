@@ -16,7 +16,7 @@ const connect = function() {
       });
       conn.write("Name: " + snakeName);//displays name
 
-      // conn.write(moves.up);
+      
     }
   );
 

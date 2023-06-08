@@ -2,7 +2,7 @@
 const  {keyDict} = require("./constants");
 let connection;
 
-//functions to take in  and  callback to handle user input
+//functions to take in data from server and  callback to handle user input
 const setupInput = (conn) => {
   connection = conn;
   const stdin = process.stdin;
